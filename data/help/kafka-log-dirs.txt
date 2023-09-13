@@ -1,0 +1,30 @@
+kafka-log-dirs -help
+23/09/13 10:58:36 INFO  utils.Log4jControllerRegistration$: [main]: 
+Registered kafka:type=kafka.Log4jController MBean
+This tool helps to query log directory usage on the specified brokers.
+Option                                  Description                           
+------                                  -----------                           
+--bootstrap-server <String: The server  REQUIRED: the server(s) to use for    
+  (s) to use for bootstrapping>           bootstrapping                       
+--broker-list <String: Broker list>     The list of brokers to be queried 
+in  
+                                          the form "0,1,2". All brokers in 
+the
+                                          cluster will be queried if no 
+broker
+                                          list is specified                   
+--command-config <String: Admin client  Property file containing configs 
+to be
+  property file>                          passed to Admin Client.             
+--describe                              Describe the specified log 
+directories
+                                          on the specified brokers.           
+--help                                  Print usage information.              
+--topic-list <String: Topic list>       The list of topics to be queried 
+in   
+                                          the form "topic1,topic2,topic3". 
+All
+                                          topics will be queried if no 
+topic  
+                                          list is specified (default: )       
+--version                               Display Kafka version.  

@@ -1,0 +1,36 @@
+Commands for Client Interactions
+Assuming you have Kafka running on your cluster, here are some commands that describe the typical steps you would need to exercise Kafka functionality:
+
+Create a topic
+$ kafka-topics --create --zookeeper zkinfo --replication-factor 1 --partitions 1 --topic test
+where the ZooKeeper connect string zkinfo is a comma-separated list of the Zookeeper nodes in host: port format.
+
+Validate the topic was created successfully
+$ kafka-topics --list --zookeeper zkinfo
+Produce messages
+The following command can be used to publish a message to the Kafka cluster. After the command, each typed line is a message that is sent to Kafka. After the last message, send an EOF or stop the command with Ctrl-D.
+
+$ kafka-console-producer --broker-list kafkainfo --topic test
+My first message.
+My second message.
+^D
+where kafkainfo is a comma-separated list of the Kafka brokers in host:port format. Using more than one makes sure that the command can find a running broker.
+
+Consume messages
+The following command can be used to subscribe to a message from the Kafka cluster.
+
+kafka-console-consumer --bootstrap-server kafkainfo --topic test --from-beginning
+The output shows the same messages that you entered during your producer.
+
+Set a ZooKeeper root node
+It’s possible to use a root node (chroot) for all Kafka nodes in ZooKeeper by setting a value for zookeeper.chroot in Cloudera Manager. Append this value to the end of your ZooKeeper connect string.
+
+Set chroot in Cloudera Manager:
+
+$ zookeeper.chroot=/kafka
+Form the ZooKeeper connect string as follows:
+
+--zookeeper zkinfo/kafka
+If you set chroot and then use only the host and port in the connect string, you'll see the following exception:
+
+InvalidReplicationFactorException: replication factor: 3 larger than available brokers: 0
