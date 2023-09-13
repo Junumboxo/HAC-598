@@ -1,0 +1,171 @@
+$ kafka-console-consumer --from-beginning -bootstrap-server 
+kafka-hack-1.kafka-hack.root.hwx.site:9092 --topic test-topic
+23/09/13 14:09:25 INFO  utils.Log4jControllerRegistration$: [main]: 
+Registered kafka:type=kafka.Log4jController MBean
+23/09/13 14:09:26 INFO  consumer.ConsumerConfig: [main]: ConsumerConfig 
+values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-hack-1.kafka-hack.root.hwx.site:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = console-consumer
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = console-consumer-73549
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class 
+org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class 
+org.apache.kafka.clients.consumer.RangeAssignor, class 
+org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class 
+org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+23/09/13 14:09:26 INFO  utils.AppInfoParser: [main]: Kafka version: 
+3.4.1.7.2.18.0-333
+23/09/13 14:09:26 INFO  utils.AppInfoParser: [main]: Kafka commitId: 
+5e1910fd002397da
+23/09/13 14:09:26 INFO  utils.AppInfoParser: [main]: Kafka startTimeMs: 
+1694614166543
+23/09/13 14:09:26 INFO  consumer.KafkaConsumer: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Subscribed to 
+topic(s): test-topic
+23/09/13 14:09:27 INFO  clients.Metadata: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Resetting the 
+last seen epoch of partition test-topic-0 to 0 since the associated 
+topicId changed from null to J0qKKuMtRBaKf-tsxzV7ug
+23/09/13 14:09:27 INFO  clients.Metadata: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Cluster ID: 
+Hk0UQmHgThCt62YomXI_sw
+23/09/13 14:09:27 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Discovered 
+group coordinator kafka-hack-1.kafka-hack.root.hwx.site:9092 (id: 
+2147483636 rack: null)
+23/09/13 14:09:27 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] (Re-)joining 
+group
+23/09/13 14:09:27 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Request joining 
+group due to: need to re-join with the given member-id: 
+console-consumer-07b9edf7-5288-4c6e-a2a0-e3c43abf4865
+23/09/13 14:09:27 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Request joining 
+group due to: rebalance failed due to 'The group member needs to have a 
+valid member id before actually entering a consumer group.' 
+(MemberIdRequiredException)
+23/09/13 14:09:27 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] (Re-)joining 
+group
+23/09/13 14:09:30 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Successfully 
+joined group with generation Generation{generationId=1, 
+memberId='console-consumer-07b9edf7-5288-4c6e-a2a0-e3c43abf4865', 
+protocol='range'}
+23/09/13 14:09:30 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Finished 
+assignment for group at generation 1: 
+{console-consumer-07b9edf7-5288-4c6e-a2a0-e3c43abf4865=Assignment(partitions=[test-topic-0])}
+23/09/13 14:09:30 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Successfully 
+synced group in generation Generation{generationId=1, 
+memberId='console-consumer-07b9edf7-5288-4c6e-a2a0-e3c43abf4865', 
+protocol='range'}
+23/09/13 14:09:30 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Notifying 
+assignor about the new Assignment(partitions=[test-topic-0])
+23/09/13 14:09:30 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Adding newly 
+assigned partitions: test-topic-0
+23/09/13 14:09:30 INFO  internals.ConsumerCoordinator: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Found no 
+committed offset for partition test-topic-0
+23/09/13 14:09:30 INFO  internals.SubscriptionState: [main]: [Consumer 
+clientId=console-consumer, groupId=console-consumer-73549] Resetting 
+offset for partition test-topic-0 to position FetchPosition{offset=0, 
+offsetEpoch=Optional.empty, 
+currentLeader=LeaderAndEpoch{leader=Optional[kafka-hack-3.kafka-hack.root.hwx.site:9092 
+(id: 15 rack: null)], epoch=0}}.
+hi
+hello
+yey
+
